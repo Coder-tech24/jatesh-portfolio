@@ -303,92 +303,69 @@ h1 {
 .tech-stack-section {
   width: min(1120px, 92%);
   margin: 1rem auto 6rem;
-  }
-  
-  .tech-stack-section h2 {
+}
+
+.tech-stack-section h2 {
   font-size: 3rem;
   margin: 0 0 2rem;
   letter-spacing: -0.04em;
-  }
-  
-  .tech-grid {
+}
+
+.tech-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
   gap: 1.5rem;
-  }
-  
-  .tech-card {
+}
+
+.tech-card {
   min-height: 170px;
-  perspective: 1000px;
-  cursor: pointer;
-  transition:
-  transform 250ms ease,
-  box-shadow 250ms ease,
-  border-color 250ms ease;
-  }
-  
-  .tech-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.7s ease;
-  transform-style: preserve-3d;
-  }
-  
-  .tech-card:hover {
-  transform: translateY(-12px) scale(1.03);
-  box-shadow:
-  0 24px 70px rgba(0, 0, 0, 0.35),
-  0 0 40px rgba(88, 166, 255, 0.08);
-  }
-  
-  .tech-card:hover .tech-card-inner {
-  transform: rotateY(180deg);
-  }
-  
-  .tech-card-front,
-  .tech-card-back {
-  position: absolute;
-  inset: 0;
   padding: 1.4rem;
   border-radius: 1.5rem;
   background: rgba(255, 255, 255, 0.045);
   border: 1px solid rgba(255, 255, 255, 0.09);
   backdrop-filter: blur(10px);
-  backface-visibility: hidden;
-  }
-  
-  .tech-card-front {
+  cursor: pointer;
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease,
+    border-color 250ms ease,
+    background 250ms ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(88, 166, 255, 0.45);
+  background: rgba(255, 255, 255, 0.075);
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.35),
+    0 0 40px rgba(88, 166, 255, 0.08);
+}
+
+.tech-card-inner {
+  height: 100%;
+}
+
+.tech-card-front {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  }
-  
-  .tech-card-back {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transform: rotateY(180deg);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(88, 166, 255, 0.35);
-  }
-  
-  .tech-card h3 {
+}
+
+.tech-card-back {
+  display: none;
+}
+
+.tech-card h3 {
   margin: 0;
   font-size: 1.25rem;
-  }
-  
-  .tech-card p {
+}
+
+.tech-card p {
   margin: 0.55rem 0 0;
   color: #a3a3a3;
   line-height: 1.5;
-  }
-  
-  .tech-card-back p {
-  margin: 0;
-  color: #f5f5f5;
-  }
+}
 
 /* ANIMATION */
 
