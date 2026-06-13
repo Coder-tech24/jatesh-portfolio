@@ -969,3 +969,28 @@ h1 {
     transform: translateY(8px);
   }
 }
+
+/* MOBILE FIXES */
+
+@media (max-width: 700px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-large {
+    grid-column: span 1;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .project-tech {
+    gap: 0.5rem;
+  }
+
+  .project-tech span {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.7rem;
+  }
+}
